@@ -1,0 +1,46 @@
+.container {
+    border: 1px solid;
+    width: 800px;
+    height: 500px;
+    background-color: red;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 20px;
+    height: 400px;
+}
+
+.button {
+    cursor: pointer;
+    width:150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: yellow;
+    font-family: cursive;
+    font-size: 50px;
+    margin-top: 10px;
+}
+#button1{
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
