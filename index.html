@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "utf-8">
         <title>Etch-A-Sketch</title>
-        <link rel="stylesheet" href="etch.css">
+        <meta charset="utf-8">
+        <script src = "etch.js" defer></script>
+        <link rel="stylesheet" href = "etch.css">
     </head>
     <body>
         <div class="flex-container">
-            <div class="container">
-                <div class="header">Etch-A-Sketch</div>
-                <div class="buttons">
-                    <button class="button" id="button1">Black</button>
-                    <button class="button" id="button2">Gray</button>
-                    <button class="button" id="button3">RGB</button>
+            <div class="content">
+                <div class="grid">
                 </div>
+                <div class="buttons">
+                    <button>Black</button>
+                    <button>Gray</button>
+                    <button id="clearBoard">Clear Board</button>
+                </div>
+                <input type="text" value="16" id = "inputbox">
+                <button id="setSize">Set Size</button>
             </div>
         </div>
     </body>
