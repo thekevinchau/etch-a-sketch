@@ -1,5 +1,7 @@
 *{
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    margin-bottom: 0px;
 }
 
 :root {
@@ -12,22 +14,24 @@
     justify-content: center;
     align-items: center;
     height: 800px;
+    background-color: pink;
 }
 
 .grid {
+    background-color: white;
     display: flex;
     justify-content: center;
     width: 500px;
     height: 500px;
     display: grid;
-    border: 5px solid black;
+    border: 5px solid rgb(187, 114, 141);
 }
 .grid-item {
     border: none;
   }
 
 .button {
-    border: 2px solid black;
+    border: 2px solid rgb(187, 114, 141);
     cursor: pointer;
     font-weight: bold;
     color: white;
@@ -36,7 +40,6 @@
 
 .buttons {
     width: 100px;
-    text-align: center;
     display: flex;
 
 }
@@ -75,6 +78,30 @@
     color: black;
 }
 .boardInfo{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
+    color: white;
 }
+.Header {
+    display: flex;
+    background-color: pink;
+    color: white;
+    font-family: cursive;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+}
+#setSize{
+    background-color:rgb(255, 0, 136)
+}
+.footer {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 80px;
+}
+.github:hover {
+    opacity: 50%;
+  }

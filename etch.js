@@ -98,6 +98,7 @@ function playGame(){
     })
     sizeButton.addEventListener("click", () => {
         clearBoard();
+        numPixels.textContent = `Board Dimensions: ${inp.value} x ${inp.value}`
         makeGrid(inp.value);
         console.log("hello");
     })
