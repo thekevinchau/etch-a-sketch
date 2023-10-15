@@ -2,25 +2,38 @@ let grid = document.querySelector(".grid");
 let inp = document.querySelector("#inputbox");
 let clearButton = document.querySelector("#clearBoard");
 let sizeButton = document.querySelector("#setSize")
-let color = 'black'; 
+let color = 'black';
+let click = false;
+
+function checkClicked(){
+    let grid = document.querySelector(".grid");
+    document.body.addEventListener('click', (event) => {
+        if (event.target.className !== "button"){
+            click = !click;
+        }
+    })
+}
 
 function setColor (colorChoice) {
     color = colorChoice;
 }
 function colorSquare(){
-    if (color === 'gray'){
-        this.style.backgroundColor = 'gray';
-    }
-    else if (color === 'black'){
-        this.style.backgroundColor = 'black';
-    }
-    else if (color === 'random'){
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
-    }
-    else {
-        this.style.backgroundColor ='lightpink'
+    if (click){
+        if (color === 'gray'){
+            this.style.backgroundColor = 'gray';
+        }
+        else if (color === 'black'){
+            this.style.backgroundColor = 'black';
+        }
+        else if (color === 'random'){
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+        }
+        else {
+            this.style.backgroundColor ='lightpink'
+        }
     }
 }
+
 
 
 function clearBoard(){
@@ -48,7 +61,7 @@ function makeGrid(size){
 
 
 function playGame(){
-    makeGrid(16); //default board size
+        makeGrid(16); //default board size
 
     clearButton.addEventListener("click", () => {
         clearBoard();
@@ -59,5 +72,6 @@ function playGame(){
         console.log("hello");
     })
 }
-
+checkClicked();
 playGame();
+
