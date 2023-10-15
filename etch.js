@@ -4,14 +4,30 @@ let clearButton = document.querySelector("#clearBoard");
 let sizeButton = document.querySelector("#setSize")
 let color = 'black';
 let click = false;
+let drawStatus = document.createElement('p')
+let numPixels = document.createElement('p')
+drawStatus.textContent = "Not Currently Drawing"
+numPixels.textContent = `Board Dimensions: ${inp.value} x ${inp.value}`
+drawStatus.className = "boardInfo"
+numPixels.className = "boardInfo"
+let content = document.querySelector('.content');
+
+content.appendChild(drawStatus);
+content.appendChild(numPixels);
 
 function checkClicked(){
-    let grid = document.querySelector(".grid");
     document.body.addEventListener('click', (event) => {
         if (event.target.className !== "button"){
             click = !click;
         }
-    })
+        if (click){
+            drawStatus.textContent = "Currently Drawing"
+        }
+        else{
+            drawStatus.textContent = "Not Currently Drawing"
+        }
+}
+    )
 }
 
 function setColor (colorChoice) {
@@ -19,8 +35,23 @@ function setColor (colorChoice) {
 }
 function colorSquare(){
     if (click){
-        if (color === 'gray'){
-            this.style.backgroundColor = 'gray';
+        if (color === 'red'){
+            this.style.backgroundColor = 'red';
+        }
+        else if (color === 'orange'){
+            this.style.backgroundColor = 'orange';
+        }
+        else if (color === 'yellow'){
+            this.style.backgroundColor = 'yellow';
+        }
+        else if (color === 'green'){
+            this.style.backgroundColor = 'green';
+        }
+        else if (color === 'blue'){
+            this.style.backgroundColor = 'blue';
+        }
+        else if (color === 'purple'){
+            this.style.backgroundColor = 'purple';
         }
         else if (color === 'black'){
             this.style.backgroundColor = 'black';
@@ -43,7 +74,6 @@ function clearBoard(){
 
 function makeGrid(size){
     if (size < 0 || size > 100){
-        inp.value = "1-100 ONLY"
         size = 16;
     }
     else {
